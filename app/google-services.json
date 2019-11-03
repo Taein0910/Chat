@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1065504985837",
+    "firebase_url": "https://chatting-f4ce8.firebaseio.com",
+    "project_id": "chatting-f4ce8",
+    "storage_bucket": "chatting-f4ce8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065504985837:android:a3054a9788cceb24a732e4",
+        "android_client_info": {
+          "package_name": "com.icecream.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065504985837-ubie60raqigdi1pkvpgmsc5naiej333f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icecream.chat",
+            "certificate_hash": "b433d3f1e0c69167571e5f4d2ee14acc26b53771"
+          }
+        },
+        {
+          "client_id": "1065504985837-joo9uatbjscrr851hd0of9uttadrlalk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icecream.chat",
+            "certificate_hash": "7a6dc2649793d268e1eac824fd5705293ecd834b"
+          }
+        },
+        {
+          "client_id": "1065504985837-nvvaj5h6fme19vv8rgkf115qiv6frnff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA3pnTyl4obe72zSmDkD5tHOaB3dkQeh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065504985837-nvvaj5h6fme19vv8rgkf115qiv6frnff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
