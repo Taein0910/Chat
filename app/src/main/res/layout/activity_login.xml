@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="20dp"
         android:gravity="center_horizontal"
         android:layout_below="@+id/toolbar"
         >
@@ -22,9 +22,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="20sp"
+            android:layout_gravity="start"
+            android:text="로그인하고 채팅을 시작하세요."
+            android:textSize="25sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
             />
 
 
@@ -34,9 +36,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/email"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             app:met_floatingLabel="normal"
-            android:hint="Email"
+            android:hint="이메일"
             />
 
         <com.rengwuxian.materialedittext.MaterialEditText
@@ -45,13 +47,13 @@
             android:id="@+id/password"
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
-            android:hint="Password"
+            android:hint="비밀번호"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="login"
+            android:text="로그인"
             android:id="@+id/btn_login"
             android:background="@color/colorPrimaryDark"
             android:layout_marginTop="10dp"
