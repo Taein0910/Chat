@@ -59,5 +59,16 @@
             android:layout_marginTop="10dp"
             android:textColor="#fff"></Button>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="비밀번호를 잊으셨나요?"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:id="@+id/forgot_password"
+            android:textColor="@color/colorPrimaryDark"/>
+
     </LinearLayout>
 </RelativeLayout>

@@ -128,7 +128,7 @@ public class MessageActivity extends AppCompatActivity {
     }
 
     private void seenMessage(final String userid) {
-        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference = FirebaseDatabase.getInstance().getReference("Chats");
         seenListner = reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -149,7 +149,6 @@ public class MessageActivity extends AppCompatActivity {
         });
     }
 
-    //13:06
 
     private void sendMessage (String sender, String receiver, String message) {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
@@ -162,6 +161,25 @@ public class MessageActivity extends AppCompatActivity {
 
 
         reference.child("Chats").push().setValue(hashMap);
+        final String userid = intent.getStringExtra("userid");
+
+        final DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
+                .child(fuser.getUid())
+                .child(userid);
+
+        chatRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.exists()) {
+                    chatRef.child("id").setValue(userid);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
     }
