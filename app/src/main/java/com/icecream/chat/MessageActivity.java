@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -211,6 +212,12 @@ public class MessageActivity extends AppCompatActivity {
         });
     }
 
+    private void currentUser(String userid) {
+        SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();
+        editor.putString("currentuser", userid);
+        editor.apply();
+    }
+
 
     private void status(String status) {
         reference = FirebaseDatabase.getInstance().getReference().child(fuser.getUid());
@@ -223,14 +230,17 @@ public class MessageActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        final String userid = intent.getStringExtra("userid");
         super.onResume();
         status("online");
+        currentUser(userid);
     }
     @Override
     protected void onPause() {
         super.onPause();
         reference.removeEventListener(seenListner);
         status("offline");
+        currentUser("none");
     }
 
 
